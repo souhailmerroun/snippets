@@ -1,0 +1,10 @@
+{
+    "ngrok setup": {
+        "prefix": "ngrok setup",
+        "body": [
+            "npm install ngrok -g \\",
+            "; ngrok authtoken 2xSw8Fm38fkbKCDVep5tj_JkeESnfKiGJKtdkPZ75B \\",
+            "; ngrok http 80"
+        ]
+    },
+}

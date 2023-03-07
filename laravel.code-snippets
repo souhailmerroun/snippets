@@ -1,37 +1,67 @@
 {
-  // Installation
   "laravel installation": {
     "prefix": "laravel installation",
     "body": [
-      "# https://laravel.com/docs/9.x#getting-started-on-macos",
-      "curl -s \"https://laravel.build/example-app\" | bash",
-      "mv example-app/{.,}* /workspaces/laravel",
-      "rm -rf example-app && echo &&",
-      "./vendor/bin/sail up"
+      "# https://laravel.com/docs/10.x#getting-started-on-macos",
+      "curl -s \"https://laravel.build/example-app\" | bash \\",
+      "; mv example-app/{.,}* /workspaces/laravel \\",
+      "; rm -rf example-app \\",
+      "; ./vendor/bin/sail up"
     ]
   },
 
-  // Migration
-  "laravel sail artisan": {
-    "prefix": "laravel sail artisan",
+  "laravel make model": {
+    "prefix": "laravel make model",
     "body": [
+      "# https://laravel.com/docs/10.x/eloquent",
+      "./vendor/bin/sail artisan make:model Flight --migration --factory --seed --controller --resource --requests --policy",
+      "Route::resource('photos', PhotoController::class);"
+    ]
+  },
+
+  "laravel soft delete": {
+    "prefix": "laravel soft delete",
+    "body": [
+        "# https://laravel.com/docs/10.x/eloquent#soft-deleting",
+        "use Illuminate\\Database\\Eloquent\\SoftDeletes;",
+        " ",
+        "class Flight extends Model",
+        "{",
+        "\tuse SoftDeletes;",
+        "}",
+        "",
+        "Schema::table('flights', function (Blueprint \\$table) {",
+        "\t\\$table->softDeletes();",
+        "});",
+        " ",
+        "Schema::table('flights', function (Blueprint \\$table) {",
+        "\t\\$table->dropSoftDeletes();",
+        "});"
+    ]
+  },
+
+  "laravel artisan migrate": {
+    "prefix": "laravel artisan migrate",
+    "body": [
+      "# https://laravel.com/docs/10.x/migrations",
       "./vendor/bin/sail artisan migrate",
       "./vendor/bin/sail artisan migrate:fresh --seed",
-      "./vendor/bin/sail artisan tinker"
     ]
   },
 
-  // New entity
-  "laravel make:migration": {
-    "prefix": "laravel make:migration",
-    "body": ["php artisan make:migration create_flights_table"]
-  },
-
-  // Snippets
-  "laravel snippets": {
-    "prefix": "laravel snippets",
+  "laravel artisan make migration": {
+    "prefix": "laravel artisan make migration",
     "body": [
-      "code here"
+      "./vendor/bin/sail artisan make:migration create_flights_table"
     ]
-  }
+  },
+
+  "laravel artisan tinker": {
+    "prefix": "laravel artisan tinker",
+    "body": [
+      "# https://laravel.com/docs/10.x/artisan#tinker",
+      "./vendor/bin/sail artisan tinker",
+      "\\App\\Models\\Task::all();"
+    ]
+  },
 }

@@ -19,6 +19,12 @@
             "symfony server:start"
         ]
     },
+    "apiplatform install docker v3.0.3": {
+        "prefix": "apiplatform install docker v3.0.3",
+        "body": [
+            "git clone --depth 1 --branch v3.0.3 https://github.com/api-platform/api-platform.git"
+        ]
+    },
     "apiplatform make entity": {
         "prefix": "apiplatform make entity",
         "body": [
@@ -200,18 +206,10 @@
             "}"
         ]
     },
-    "apiplatform install docker v3.0.3": {
-        "prefix": "apiplatform install docker v3.0.3",
-        "body": [
-            "git clone --depth 1 --branch v3.0.3 https://github.com/api-platform/api-platform.git"
-        ]
-    },
 	"apiplatform ngrok": {
         "prefix": "apiplatform ngrok",
         "body": [
-            "npm install ngrok -g",
-            "ngrok authtoken 2xSw8Fm38fkbKCDVep5tj_JkeESnfKiGJKtdkPZ75B",
-            "ngrok http 8000",
+            "ngrok setup <- (snippet)",
             "ngrok http https://localhost --host-header=\"localhost\""
         ]
     },

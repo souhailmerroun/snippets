@@ -7,69 +7,26 @@
 			"</div>"
 		]
 	},
-	"bootstrap form email password": {
-		"prefix": "bootstrap form email password",
-		"body": [
-			"<form>",
-			"\t<div class=\"mb-3\">",
-			"\t\t<label for=\"exampleInputEmail1\" class=\"form-label\">Email address</label>",
-			"\t\t<input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\">",
-			"\t\t<div id=\"emailHelp\" class=\"form-text\">We'll never share your email with anyone else.</div>",
-			"\t</div>",
-			"\t<div class=\"mb-3\">",
-			"\t\t<label for=\"exampleInputPassword1\" class=\"form-label\">Password</label>",
-			"\t\t<input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\">",
-			"\t</div>",
-			"\t<div class=\"mb-3 form-check\">",
-			"\t\t<input type=\"checkbox\" class=\"form-check-input\" id=\"exampleCheck1\">",
-			"\t\t<label class=\"form-check-label\" for=\"exampleCheck1\">Check me out</label>",
-			"\t</div>",
-			"\t<button type=\"submit\" class=\"btn btn-primary\">Submit</button>",
-			"</form>"
-		]
-	},
-	"bootstrap alert": {
-		"prefix": "bootstrap alert",
-		"body": [
-			"https://getbootstrap.com/docs/5.2/components/alerts/",
-			"",
-			"<div class=\"alert alert-primary\" role=\"alert\">",
-			"\tA simple primary alert—check it out!",
-			"</div>"
-		]
-	},
-	"bootstrap breadcrumb": {
-		"prefix": "bootstrap breadcrumb",
-		"body": [
-			"<nav aria-label=\"breadcrumb\">",
-			"\t<ol class=\"breadcrumb\">",
-			"\t\t<li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>",
-			"\t\t<li class=\"breadcrumb-item\"><a href=\"#\">Library</a></li>",
-			"\t\t<li class=\"breadcrumb-item active\" aria-current=\"page\">Data</li>",
-			"\t</ol>",
-			"</nav>"
-		]
-	},
-	"bootstrap button": {
-		"prefix": "bootstrap button",
-		"body": [
-			"<button type=\"button\" class=\"btn btn-primary\">Primary</button>"
-		]
-	},
-	"bootstrap card": {
-		"prefix": "bootstrap card",
-		"body": [
-			"<div class=\"card\" style=\"width: 18rem;\">",
-			"\t<img src=\"...\" class=\"card-img-top\" alt=\"...\">",
-			"\t<div class=\"card-body\">",
-			"\t\t<h5 class=\"card-title\">Card title</h5>",
-			"\t\t<p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's",
-			"\t\t\tcontent.</p>",
-			"\t\t<a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>",
-			"\t</div>",
-			"</div>"
-		]
-	},
+
+	"boostrap row": {
+        "prefix": "boostrap row",
+        "body": [
+            "<div class=\"container text-center\">",
+            "  <div class=\"row align-items-start\">",
+            "\t<div class=\"col\">",
+            "\t  One of three columns",
+            "\t</div>",
+            "\t<div class=\"col\">",
+            "\t  One of three columns",
+            "\t</div>",
+            "\t<div class=\"col\">",
+            "\t  One of three columns",
+            "\t</div>",
+            "  </div>",
+            "</div>"
+        ]
+    },
+
 	"bootstrap navbar": {
 		"prefix": "bootstrap navbar",
 		"body": [
@@ -115,14 +72,61 @@
 			"</nav>"
 		]
 	},
-	"bootstrap spinner": {
-		"prefix": "bootstrap spinner",
+
+	"bootstrap breadcrumb": {
+		"prefix": "bootstrap breadcrumb",
 		"body": [
-			"<div class=\"spinner-border\" role=\"status\">",
-			"\t<span class=\"visually-hidden\">Loading...</span>",
+			"<nav aria-label=\"breadcrumb\">",
+			"\t<ol class=\"breadcrumb\">",
+			"\t\t<li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>",
+			"\t\t<li class=\"breadcrumb-item\"><a href=\"#\">Library</a></li>",
+			"\t\t<li class=\"breadcrumb-item active\" aria-current=\"page\">Data</li>",
+			"\t</ol>",
+			"</nav>"
+		]
+	},
+	
+	"bootstrap alert": {
+		"prefix": "bootstrap alert",
+		"body": [
+			"https://getbootstrap.com/docs/5.2/components/alerts/",
+			"",
+			"<div class=\"alert alert-primary\" role=\"alert\">",
+			"\tA simple primary alert—check it out!",
 			"</div>"
 		]
 	},
+
+	"bootstrap button": {
+		"prefix": "bootstrap button",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-primary\">Primary</button>",
+			"<button type=\"button\" class=\"btn btn-secondary\">Secondary</button>",
+			"<button type=\"button\" class=\"btn btn-success\">Success</button>",
+			"<button type=\"button\" class=\"btn btn-danger\">Danger</button>",
+			"<button type=\"button\" class=\"btn btn-warning\">Warning</button>",
+			"<button type=\"button\" class=\"btn btn-info\">Info</button>",
+			"<button type=\"button\" class=\"btn btn-light\">Light</button>",
+			"<button type=\"button\" class=\"btn btn-dark\">Dark</button>",
+			"<button type=\"button\" class=\"btn btn-link\">Link</button>"
+		]
+	},
+
+	"bootstrap card": {
+		"prefix": "bootstrap card",
+		"body": [
+			"<div class=\"card\" style=\"width: 18rem;\">",
+			"\t<img src=\"...\" class=\"card-img-top\" alt=\"...\">",
+			"\t<div class=\"card-body\">",
+			"\t\t<h5 class=\"card-title\">Card title</h5>",
+			"\t\t<p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's",
+			"\t\t\tcontent.</p>",
+			"\t\t<a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>",
+			"\t</div>",
+			"</div>"
+		]
+	},
+
 	"boostrap table": {
 		"prefix": "boostrap table",
 		"body": [
@@ -158,6 +162,7 @@
 			"</table>"
 		]
 	},
+
 	"bootstrap pagination": {
 		"prefix": "bootstrap pagination",
 		"body": [
@@ -171,5 +176,36 @@
 			"\t</ul>",
 			"  </nav>"
 		]
-	}
+	},
+	
+	"bootstrap form email password": {
+		"prefix": "bootstrap form email password",
+		"body": [
+			"<form>",
+			"\t<div class=\"mb-3\">",
+			"\t\t<label for=\"exampleInputEmail1\" class=\"form-label\">Email address</label>",
+			"\t\t<input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\">",
+			"\t\t<div id=\"emailHelp\" class=\"form-text\">We'll never share your email with anyone else.</div>",
+			"\t</div>",
+			"\t<div class=\"mb-3\">",
+			"\t\t<label for=\"exampleInputPassword1\" class=\"form-label\">Password</label>",
+			"\t\t<input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\">",
+			"\t</div>",
+			"\t<div class=\"mb-3 form-check\">",
+			"\t\t<input type=\"checkbox\" class=\"form-check-input\" id=\"exampleCheck1\">",
+			"\t\t<label class=\"form-check-label\" for=\"exampleCheck1\">Check me out</label>",
+			"\t</div>",
+			"\t<button type=\"submit\" class=\"btn btn-primary\">Submit</button>",
+			"</form>"
+		]
+	},
+	
+	"bootstrap spinner": {
+		"prefix": "bootstrap spinner",
+		"body": [
+			"<div class=\"spinner-border\" role=\"status\">",
+			"\t<span class=\"visually-hidden\">Loading...</span>",
+			"</div>"
+		]
+	},
 }

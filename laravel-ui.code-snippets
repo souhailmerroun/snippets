@@ -1,0 +1,11 @@
+{
+  "laravel ui setup auth": {
+    "prefix": "laravel ui setup auth",
+    "body": [
+      "# https://github.com/laravel/ui#installation",
+      "composer require laravel/ui",
+      "./vendor/bin/sail artisan ui bootstrap --auth",
+      "npm install && npm run build"
+    ]
+  }
+}
