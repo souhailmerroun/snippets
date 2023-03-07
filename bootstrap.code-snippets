@@ -1,0 +1,175 @@
+{
+	"bootstrap container": {
+		"prefix": "bootstrap container",
+		"body": [
+			"<div class=\"container\">",
+			"\t<!-- Content here -->",
+			"</div>"
+		]
+	},
+	"bootstrap form email password": {
+		"prefix": "bootstrap form email password",
+		"body": [
+			"<form>",
+			"\t<div class=\"mb-3\">",
+			"\t\t<label for=\"exampleInputEmail1\" class=\"form-label\">Email address</label>",
+			"\t\t<input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\">",
+			"\t\t<div id=\"emailHelp\" class=\"form-text\">We'll never share your email with anyone else.</div>",
+			"\t</div>",
+			"\t<div class=\"mb-3\">",
+			"\t\t<label for=\"exampleInputPassword1\" class=\"form-label\">Password</label>",
+			"\t\t<input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\">",
+			"\t</div>",
+			"\t<div class=\"mb-3 form-check\">",
+			"\t\t<input type=\"checkbox\" class=\"form-check-input\" id=\"exampleCheck1\">",
+			"\t\t<label class=\"form-check-label\" for=\"exampleCheck1\">Check me out</label>",
+			"\t</div>",
+			"\t<button type=\"submit\" class=\"btn btn-primary\">Submit</button>",
+			"</form>"
+		]
+	},
+	"bootstrap alert": {
+		"prefix": "bootstrap alert",
+		"body": [
+			"https://getbootstrap.com/docs/5.2/components/alerts/",
+			"",
+			"<div class=\"alert alert-primary\" role=\"alert\">",
+			"\tA simple primary alert—check it out!",
+			"</div>"
+		]
+	},
+	"bootstrap breadcrumb": {
+		"prefix": "bootstrap breadcrumb",
+		"body": [
+			"<nav aria-label=\"breadcrumb\">",
+			"\t<ol class=\"breadcrumb\">",
+			"\t\t<li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>",
+			"\t\t<li class=\"breadcrumb-item\"><a href=\"#\">Library</a></li>",
+			"\t\t<li class=\"breadcrumb-item active\" aria-current=\"page\">Data</li>",
+			"\t</ol>",
+			"</nav>"
+		]
+	},
+	"bootstrap button": {
+		"prefix": "bootstrap button",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-primary\">Primary</button>"
+		]
+	},
+	"bootstrap card": {
+		"prefix": "bootstrap card",
+		"body": [
+			"<div class=\"card\" style=\"width: 18rem;\">",
+			"\t<img src=\"...\" class=\"card-img-top\" alt=\"...\">",
+			"\t<div class=\"card-body\">",
+			"\t\t<h5 class=\"card-title\">Card title</h5>",
+			"\t\t<p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's",
+			"\t\t\tcontent.</p>",
+			"\t\t<a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>",
+			"\t</div>",
+			"</div>"
+		]
+	},
+	"bootstrap navbar": {
+		"prefix": "bootstrap navbar",
+		"body": [
+			"<nav class=\"navbar navbar-expand-lg bg-light\">",
+			"\t<div class=\"container-fluid\">",
+			"\t\t<a class=\"navbar-brand\" href=\"#\">Navbar</a>",
+			"\t\t<button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\"",
+			"\t\t\taria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">",
+			"\t\t\t<span class=\"navbar-toggler-icon\"></span>",
+			"\t\t</button>",
+			"\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">",
+			"\t\t\t<ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">",
+			"\t\t\t\t<li class=\"nav-item\">",
+			"\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Home</a>",
+			"\t\t\t\t</li>",
+			"\t\t\t\t<li class=\"nav-item\">",
+			"\t\t\t\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
+			"\t\t\t\t</li>",
+			"\t\t\t\t<li class=\"nav-item dropdown\">",
+			"\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\"",
+			"\t\t\t\t\t\taria-expanded=\"false\">",
+			"\t\t\t\t\t\tDropdown",
+			"\t\t\t\t\t</a>",
+			"\t\t\t\t\t<ul class=\"dropdown-menu\">",
+			"\t\t\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Action</a></li>",
+			"\t\t\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>",
+			"\t\t\t\t\t\t<li>",
+			"\t\t\t\t\t\t\t<hr class=\"dropdown-divider\">",
+			"\t\t\t\t\t\t</li>",
+			"\t\t\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>",
+			"\t\t\t\t\t</ul>",
+			"\t\t\t\t</li>",
+			"\t\t\t\t<li class=\"nav-item\">",
+			"\t\t\t\t\t<a class=\"nav-link disabled\">Disabled</a>",
+			"\t\t\t\t</li>",
+			"\t\t\t</ul>",
+			"\t\t\t<form class=\"d-flex\" role=\"search\">",
+			"\t\t\t\t<input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">",
+			"\t\t\t\t<button class=\"btn btn-outline-success\" type=\"submit\">Search</button>",
+			"\t\t\t</form>",
+			"\t\t</div>",
+			"\t</div>",
+			"</nav>"
+		]
+	},
+	"bootstrap spinner": {
+		"prefix": "bootstrap spinner",
+		"body": [
+			"<div class=\"spinner-border\" role=\"status\">",
+			"\t<span class=\"visually-hidden\">Loading...</span>",
+			"</div>"
+		]
+	},
+	"boostrap table": {
+		"prefix": "boostrap table",
+		"body": [
+			"<table class=\"table\">",
+			"  <thead>",
+			"\t<tr>",
+			"\t  <th scope=\"col\">#</th>",
+			"\t  <th scope=\"col\">First</th>",
+			"\t  <th scope=\"col\">Last</th>",
+			"\t  <th scope=\"col\">Handle</th>",
+			"\t</tr>",
+			"  </thead>",
+			"  <tbody>",
+			"\t<tr>",
+			"\t  <th scope=\"row\">1</th>",
+			"\t  <td>Mark</td>",
+			"\t  <td>Otto</td>",
+			"\t  <td>@mdo</td>",
+			"\t</tr>",
+			"\t<tr>",
+			"\t  <th scope=\"row\">2</th>",
+			"\t  <td>Jacob</td>",
+			"\t  <td>Thornton</td>",
+			"\t  <td>@fat</td>",
+			"\t</tr>",
+			"\t<tr>",
+			"\t  <th scope=\"row\">3</th>",
+			"\t  <td>Larry</td>",
+			"\t  <td>the Bird</td>",
+			"\t  <td>@twitter</td>",
+			"\t</tr>",
+			"  </tbody>",
+			"</table>"
+		]
+	},
+	"bootstrap pagination": {
+		"prefix": "bootstrap pagination",
+		"body": [
+			"<nav aria-label=\"Page navigation example\">",
+			"\t<ul class=\"pagination\">",
+			"\t  <li class=\"page-item\"><a class=\"page-link\" href=\"#\">Previous</a></li>",
+			"\t  <li class=\"page-item\"><a class=\"page-link\" href=\"#\">1</a></li>",
+			"\t  <li class=\"page-item\"><a class=\"page-link\" href=\"#\">2</a></li>",
+			"\t  <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>",
+			"\t  <li class=\"page-item\"><a class=\"page-link\" href=\"#\">Next</a></li>",
+			"\t</ul>",
+			"  </nav>"
+		]
+	}
+}

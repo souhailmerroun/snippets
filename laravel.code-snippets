@@ -1,0 +1,37 @@
+{
+  // Installation
+  "laravel installation": {
+    "prefix": "laravel installation",
+    "body": [
+      "# https://laravel.com/docs/9.x#getting-started-on-macos",
+      "curl -s \"https://laravel.build/example-app\" | bash",
+      "mv example-app/{.,}* /workspaces/laravel",
+      "rm -rf example-app && echo &&",
+      "./vendor/bin/sail up"
+    ]
+  },
+
+  // Migration
+  "laravel sail artisan": {
+    "prefix": "laravel sail artisan",
+    "body": [
+      "./vendor/bin/sail artisan migrate",
+      "./vendor/bin/sail artisan migrate:fresh --seed",
+      "./vendor/bin/sail artisan tinker"
+    ]
+  },
+
+  // New entity
+  "laravel make:migration": {
+    "prefix": "laravel make:migration",
+    "body": ["php artisan make:migration create_flights_table"]
+  },
+
+  // Snippets
+  "laravel snippets": {
+    "prefix": "laravel snippets",
+    "body": [
+      "code here"
+    ]
+  }
+}

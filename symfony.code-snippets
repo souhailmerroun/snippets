@@ -1,0 +1,22 @@
+{
+	"symfony new project": {
+        "prefix": "symfony new project",
+        "body": [
+			"# https://symfony.com/doc/current/setup.html#symfony-lts-versions",
+			"# https://symfony.com/doc/current/setup.html#running-symfony-applications",
+			"symfony new my_project_directory --version='6.2.*' && echo &&",
+			"mv my_project_directory/{.,}* /workspaces/apiplatform",
+			"",
+			"rm -rf my_project_directory && echo &&",
+			"php bin/console about && echo &&",
+			"symfony server:start",
+        ]
+    },
+	"symfony database:create": {
+		"prefix": "symfony database:create",
+		"body": [
+			"symfony.com/doc/current/doctrine.html#configuring-the-database",
+			"php bin/console doctrine:database:create"
+		]
+	}
+}

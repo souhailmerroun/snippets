@@ -1,0 +1,61 @@
+{
+	"reactjs react-hook-form Form": {
+		"prefix": "reactjs react-hook-form Form",
+		"body": [
+			"export default function Form() {",
+			"  const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();",
+			"",
+			"  const onSubmit: SubmitHandler<Inputs> = (data) => {",
+			"\tconsole.log(data);",
+			"  }",
+			"",
+			"  return (",
+			"\t<form onSubmit={handleSubmit(onSubmit)}>",
+			"\t  <input {...register(\"example\")} />",
+			"",
+			"\t  <input {...register(\"exampleRequired\", { required: true })} />",
+			"\t  {errors.exampleRequired && <span>This field is required</span>}",
+			"",
+			"\t  <input type=\"submit\" />",
+			"\t</form>",
+			"  );",
+			"}"
+		]
+	},
+	"reactjs react-hook-form Form with yup validation": {
+		"prefix": "reactjs react-hook-form Form with yup validation",
+		"body": [
+			"import React from 'react';",
+			"import * as Yup from 'yup';",
+			"import { useForm } from 'react-hook-form';",
+			"",
+			"const MyForm = () => {",
+			"  const validationSchema = Yup.object().shape({",
+			"\ttitle: Yup.string().required('Title is required'),",
+			"\tdescription: Yup.string(),",
+			"  });",
+			"",
+			"  const { register, handleSubmit, errors } = useForm({",
+			"\tvalidationSchema,",
+			"  });",
+			"  const onSubmit = data => {",
+			"\tconsole.log(data);",
+			"  };",
+			"",
+			"  return (",
+			"\t<form onSubmit={handleSubmit(onSubmit)}>",
+			"\t  <label htmlFor=\"title\">Title:</label>",
+			"\t  <input name=\"title\" ref={register} />",
+			"\t  {errors.title && <span>{errors.title.message}</span>}",
+			"\t  <br />",
+			"\t  <label htmlFor=\"description\">Description:</label>",
+			"\t  <input name=\"description\" ref={register} />",
+			"\t  <br />",
+			"\t  <input type=\"submit\" />",
+			"\t</form>",
+			"  );",
+			"};",
+			""
+		]
+	}
+}

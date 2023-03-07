@@ -1,0 +1,116 @@
+{
+    "nextjs-axios-todos pages/todos.tsx": {
+        "prefix": "nextjs-axios-todos pages/todos.tsx",
+        "body": [
+            "export default function Todos({ data }: { data: Todo[] }) {",
+            "\treturn <TodosPage data={data} />",
+            "}",
+            "",
+            "export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {",
+            "\tconst data = await fetchTodos();",
+            "\treturn { props: { data } };",
+            "};"
+        ]
+    },
+    "nextjs-axios-todos src/api/fetchTodos.tsx": {
+        "prefix": "nextjs-axios-todos src/api/fetchTodos.tsx",
+        "body": [
+            "export async function fetchTodos(): Promise<Todo[]> {",
+            "",
+            "\tif (MOCK_TO_BE_ENABLED) {",
+            "\t\tconst mock = new MockAdapter(axios);",
+            "\t\tmock.onGet('https://jsonplaceholder.typicode.com/todos').reply(200, [{ userId: 1, id: 1, title: 'To do', completed: false }]);",
+            "\t}",
+            "",
+            "\ttry {",
+            "\t\tconst url = 'https://jsonplaceholder.typicode.com/todos';",
+            "\t\tconst response: AxiosResponse<Todo[]> = await axios.get(url, {",
+            "\t\t\theaders: { \"Accept-Encoding\": 'gzip,deflate,compress' },",
+            "\t\t});",
+            "\t\tconsole.log({ status: response.status });",
+            "\t\tconsole.log({ statusText: response.statusText });",
+            "\t\tconsole.log({ data: response.data });",
+            "",
+            "\t\treturn response.data;",
+            "\t} catch (error) {",
+            "\t\tconsole.error(error);",
+            "\t\tthrow new Error('An error occurred while fetching data');",
+            "\t}",
+            "}"
+        ]
+    },
+    "nextjs-axios-todos src/components/Form.tsx": {
+        "prefix": "nextjs-axios-todos src/components/Form.tsx",
+        "body": [
+            "interface FormProps {",
+            "\tonSubmit: (title: string) => void;",
+            "  }",
+            "  ",
+            "  export default function Form(props: FormProps) {",
+            "\tconst [title, setTitle] = useState('');",
+            "  ",
+            "\tfunction handleChange(event: React.ChangeEvent<HTMLInputElement>) {",
+            "\t  setTitle(event.target.value);",
+            "\t}",
+            "  ",
+            "\tfunction handleSubmit(event: React.FormEvent<HTMLFormElement>) {",
+            "\t  event.preventDefault();",
+            "\t  props.onSubmit(title);",
+            "\t}",
+            "  ",
+            "\treturn (",
+            "\t  <form onSubmit={handleSubmit}>",
+            "\t\t<label>",
+            "\t\t  Title:",
+            "\t\t  <input type=\"text\" value={title} onChange={handleChange} />",
+            "\t\t</label>",
+            "\t\t<button type=\"submit\">Submit</button>",
+            "\t  </form>",
+            "\t);",
+            "  }"
+        ]
+    },
+    "nextjs-axios-todos src/components/TodosPage.tsx": {
+        "prefix": "nextjs-axios-todos src/components/TodosPage.tsx",
+        "body": [
+            "interface TodosPageProps {",
+            "\tdata: Todo[]",
+            "}",
+            "",
+            "export default function TodosPage({ data }: TodosPageProps) {",
+            "\treturn <>",
+            "\t\t<h1>Todos</h1>",
+            "",
+            "\t\t<Form",
+            "\t\t\tonSubmit={(title: string) => {",
+            "\t\t\t\tconsole.log(\"submitted \" + title)",
+            "\t\t\t}}",
+            "\t\t/>",
+            "",
+            "\t\t<hr />",
+            "",
+            "\t\t<Table",
+            "\t\t\tdata={data}",
+            "\t\t\tonEdit={(id) => {",
+            "\t\t\t\tconsole.log(\"edit \" + id)",
+            "\t\t\t}}",
+            "\t\t\tonDelete={(id) => {",
+            "\t\t\t\tconsole.log(\"delete \" + id)",
+            "\t\t\t}}",
+            "\t\t/>",
+            "\t</>",
+            "}"
+        ]
+    },
+    "nextjs-axios-todos types.ts": {
+        "prefix": "nextjs-axios-todos types.ts",
+        "body": [
+            "export interface Todo {",
+            "\tuserId: number;",
+            "\tid: number;",
+            "\ttitle: string;",
+            "\tcompleted: boolean;",
+            "}"
+        ]
+    }
+}

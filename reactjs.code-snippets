@@ -1,0 +1,53 @@
+{
+	"reactjs component-empty": {
+        "prefix": "reactjs component-empty",
+        "body": [
+            "interface ComponentProps {",
+            "\t//",
+            "}",
+            "",
+            "export default function Component(props: ComponentProps) {",
+            "\t//",
+            "",
+            "\treturn (",
+            "\t\t<div>",
+            "\t\t\t//",
+            "\t\t</div>",
+            "\t);",
+            "}"
+        ]
+    },
+	"reactjs component-form": {
+		"prefix": "reactjs component-form",
+		"body": [
+			"import React, { useState } from 'react';",
+			"",
+			"interface FormProps {",
+			"  onSubmit: (title: string) => void;",
+			"}",
+			"",
+			"export default function Form(props: FormProps) {",
+			"  const [title, setTitle] = useState('');",
+			"",
+			"  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {",
+			"\tsetTitle(event.target.value);",
+			"  }",
+			"",
+			"  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {",
+			"\tevent.preventDefault();",
+			"\tprops.onSubmit(title);",
+			"  }",
+			"",
+			"  return (",
+			"\t<form onSubmit={handleSubmit}>",
+			"\t  <label>",
+			"\t\tTitle:",
+			"\t\t<input type=\"text\" value={title} onChange={handleChange} />",
+			"\t  </label>",
+			"\t  <button type=\"submit\">Submit</button>",
+			"\t</form>",
+			"  );",
+			"}"
+		]
+	},
+}

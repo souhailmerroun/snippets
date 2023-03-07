@@ -1,0 +1,57 @@
+{
+	"nextjs-global-props pages/_app.tsx": {
+		"prefix": "nextjs-global-props pages/_app.tsx",
+		"body": [
+			"import type { AppContext, AppInitialProps, AppProps } from \"next/app\";",
+			"import App from \"next/app\";",
+			"",
+			"export type AppOwnProps = { hostname: string | undefined };",
+			"",
+			"export default function MyApp({",
+			"  Component,",
+			"  pageProps,",
+			"  hostname,",
+			"}: AppProps & AppOwnProps) {",
+			"  return <Component {...pageProps} hostname={hostname} />;",
+			"}",
+			"",
+			"MyApp.getInitialProps = async (",
+			"  context: AppContext",
+			"): Promise<AppOwnProps & AppInitialProps> => {",
+			"  const ctx = await App.getInitialProps(context);",
+			"",
+			"  console.log(\"_app\", context.ctx.req?.headers.host);",
+			"",
+			"  return { ...ctx, hostname: context.ctx.req?.headers.host };",
+			"};"
+		]
+	},
+	"nextjs-global-props pages/about.tsx": {
+		"prefix": "nextjs-global-props pages/about.tsx",
+		"body": [
+			"type Props = {",
+			"  about: string;",
+			"}",
+			"",
+			"export default function About(props: AppOwnProps & Props) {",
+			"console.log({ props });",
+			"return (",
+			"  <div>",
+			"\t<p>",
+			"\t  Go to <Link href=\"/\">home</Link>",
+			"\t</p>",
+			"  </div>",
+			");",
+			"}",
+			"",
+			"export async function getServerSideProps(context: GetServerSidePropsContext) {",
+			"console.log(\"getServerSideProps\", context.req?.headers.host);",
+			"return {",
+			"  props: {",
+			"\t  about: \"aboute page\"",
+			"  },",
+			"};",
+			"}"
+		]
+	}
+}

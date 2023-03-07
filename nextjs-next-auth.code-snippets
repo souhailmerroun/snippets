@@ -1,0 +1,43 @@
+{
+	"nextjs-next-auth getting started": {
+		"prefix": "nextjs-next-auth getting started",
+		"body": [
+			"# https://next-auth.js.org/getting-started/example",
+			"",
+			"```typescript",
+			"import { SessionProvider } from \"next-auth/react\"",
+			"",
+			"export default function App({ Component, pageProps: { session, ...pageProps } }) {",
+			"  return (",
+			"\t<SessionProvider session={session}>",
+			"\t  <Component {...pageProps} />",
+			"\t</SessionProvider>",
+			"  )",
+			"}",
+			"```",
+			"",
+			"```bash",
+			"mkdir -p pages/api/auth",
+			"touch pages/api/auth/[...nextauth].js",
+			"```",
+			"",
+			"```typescript",
+			"import NextAuth from 'next-auth';",
+			"import GithubProvider from 'next-auth/providers/github';",
+			"",
+			"export const authOptions = {",
+			"  // Configure one or more authentication providers",
+			"  providers: [",
+			"\tGithubProvider({",
+			"\t  clientId: process.env.GITHUB_ID,",
+			"\t  clientSecret: process.env.GITHUB_SECRET,",
+			"\t}),",
+			"\t// ...add more providers here",
+			"  ],",
+			"};",
+			"",
+			"export default NextAuth(authOptions);",
+			"```"
+		]
+	}
+}
